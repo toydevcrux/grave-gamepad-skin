@@ -1,8 +1,17 @@
-body {
+/* background utama */
+body,
+.app,
+.container,
+.gamepad-container {
   background-color: #0b0b0b;
 }
 
-.gamepad {
-  background: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png")
-    center center / contain no-repeat;
+/* kartu / preview gamepad */
+.card,
+.gamepad,
+.gamepad-preview {
+  background-image: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

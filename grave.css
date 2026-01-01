@@ -1,36 +1,127 @@
-/* Grave DualSense skin (tries common GPV selectors) */
-:root{
-  --grave-img: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png");
+html {
+    background: #e0f7fa;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14pt;
 }
 
-/* target a bunch of common DualSense / PS5 controller classnames */
-.controller.dualsense,
-.controller.ps5,
-.controller.dualSense,
-.controller.dual-sense,
-.controller[data-controller*="dualsense"],
-.controller[data-controller*="ps5"],
-.dualsense .controller,
-.ps5 .controller {
-  background-image: var(--grave-img) !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: contain !important;
+body {
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 15px;
 }
 
-/* make sure controller box has space */
-.controller.dualsense,
-.controller.ps5,
-.controller.dualSense,
-.controller.dual-sense,
-.controller {
-  min-width: 600px;
-  min-height: 360px;
+body,
+#menu {
+    background: #dddddd;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* optional: hide any default base image layer if it exists */
-.controller .base,
-.controller .shell,
-.controller .controller-bg {
-  background: transparent !important;
+h2 a,
+h2 a:visited,
+h3 a,
+h3 a:visited {
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em;
+}
+h2 {
+    margin: 1.5em 0.4em;
+    font-size: 1.5em;
+}
+h3 {
+    margin-left: -1em;
+}
+
+a,
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+span.warning {
+    color: red;
+    font-weight: bold;
+    font-size: 12pt;
+}
+.strike {
+    text-decoration: line-through;
+}
+
+section {
+    position: relative;
+    min-height: 200px;
+    padding: 0 0 40px;
+    padding-right: 220px;
+    padding-left: 1.6em;
+    margin: 0 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section.disabled {
+    opacity: 0.25;
+    transition: opacity 200ms;
+}
+section.disabled:hover {
+    opacity: 1;
+}
+
+section > img,
+section > svg {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    min-width: 40px;
+    min-height: 25px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: saddlebrown;
+    padding: 5px;
+}
+
+.caption {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: -1.5em;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#menu {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    min-width: 100px;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
+#menu > p {
+    margin-top: 0;
+}
+#menu a,
+#menu a:visited {
+    /* color: #BBBBFF; */
+    display: block;
+    margin: 0.5em 0;
+}
+
+#menu.snes a:not(.snes),
+#menu.other a:not(.other),
+#menu.ps3 a:not(.ps3),
+#menu.ps4 a:not(.ps4),
+#menu.xbo a:not(.xbo),
+#menu.x360 a:not(.x360),
+#menu.fightstick a:not(.fightstick){
+    display: none;
 }

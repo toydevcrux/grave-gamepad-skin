@@ -1,20 +1,36 @@
+/* Grave DualSense skin (tries common GPV selectors) */
 :root{
-  --bg: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png");
+  --grave-img: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png");
 }
 
-/* bikin semua area preview transparan biar gambar keliatan */
-*{
-  background-color: transparent !important;
-}
-
-/* tempel gambar ke elemen-elemen umum */
-html, body{
-  background: #0b0b0b !important;
-}
-
-div, section, main, article{
-  background-image: var(--bg) !important;
+/* target a bunch of common DualSense / PS5 controller classnames */
+.controller.dualsense,
+.controller.ps5,
+.controller.dualSense,
+.controller.dual-sense,
+.controller[data-controller*="dualsense"],
+.controller[data-controller*="ps5"],
+.dualsense .controller,
+.ps5 .controller {
+  background-image: var(--grave-img) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
+}
+
+/* make sure controller box has space */
+.controller.dualsense,
+.controller.ps5,
+.controller.dualSense,
+.controller.dual-sense,
+.controller {
+  min-width: 600px;
+  min-height: 360px;
+}
+
+/* optional: hide any default base image layer if it exists */
+.controller .base,
+.controller .shell,
+.controller .controller-bg {
+  background: transparent !important;
 }

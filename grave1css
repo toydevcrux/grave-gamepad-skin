@@ -1,0 +1,28 @@
+/* === Grave DualSense Skin (GPV Format) === */
+
+/* ini nge-target DualSense controller */
+.controller.ps5,
+.controller.dualsense,
+.controller.dualSense {
+  width: 700px !important;
+  height: 500px !important;
+
+  background-image: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+/* matiin image default kalau ada */
+.controller.ps5 .base,
+.controller.dualsense .base,
+.controller.dualSense .base {
+  background: transparent !important;
+}
+
+/* tombol/stick tetap keliatan */
+.button,
+.stick,
+.trigger {
+  opacity: 0.8 !important;
+}

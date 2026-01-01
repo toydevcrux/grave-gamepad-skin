@@ -1,27 +1,37 @@
-/* === Grave DualSense Skin (GPV Format) === */
+/* ===== GRAVE | DUALSENSE | GAMEPADVIEWER FINAL ===== */
 
-/* basic controller container */
-.controller.ps3,
-.controller.ps4,
+/* target semua kemungkinan container controller GPV */
+#controller,
+.controller,
 .controller.ps5,
-.controller.dualsense {
-  width: 700px;
-  height: 500px;
+.controller.ps4,
+.controller.dualsense,
+.controller.dualSense,
+.controller.dual-sense,
+.controller[data-controller],
+.gamepad,
+.gamepad.dualsense {
+  width: 700px !important;
+  height: 500px !important;
 
-  background: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png")
-    no-repeat center;
-  background-size: contain;
+  background-image: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 
-/* buttons + sticks default styling */
+/* matiin layer default kalau ada */
+.controller .base,
+.controller .shell,
+.controller .face,
+.controller .bg,
+.controller img {
+  background: transparent !important;
+}
+
+/* sedikit redup biar tombol kebaca */
 .button,
 .stick,
 .trigger {
-  opacity: 0.8;
-}
-
-/* optional shading to match photo */
-.controller.ps5 .button,
-.controller.dualsense .button {
-  filter: brightness(0.9);
+  opacity: 0.9 !important;
 }

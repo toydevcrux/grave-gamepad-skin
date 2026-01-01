@@ -1,20 +1,20 @@
-html, body {
+:root{
+  --bg: url("https://raw.githubusercontent.com/toydevcrux/grave-gamepad-skin/main/1.png");
+}
+
+/* bikin semua area preview transparan biar gambar keliatan */
+*{
+  background-color: transparent !important;
+}
+
+/* tempel gambar ke elemen-elemen umum */
+html, body{
   background: #0b0b0b !important;
 }
 
-.card, .gamepad-preview {
-  background: #0e0e0e !important;
-  border-radius: 16px !important;
-  border: 1px solid #1f1f1f !important;
-  box-shadow:
-    inset 0 0 0 1px #000,
-    0 10px 30px rgba(0,0,0,.6) !important;
-}
-
-/* aksen dikit biar niat */
-.card:hover {
-  box-shadow:
-    inset 0 0 0 1px #000,
-    0 0 0 1px rgba(255,255,255,.05),
-    0 12px 40px rgba(0,0,0,.8) !important;
+div, section, main, article{
+  background-image: var(--bg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
